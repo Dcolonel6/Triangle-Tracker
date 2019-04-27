@@ -19,3 +19,9 @@ function compare(d1,d2,d3){
         return "This is not A triangle";
     }
 }
+function getInput(evt){    
+    let dimensions = document.getElementById("dimensions").value,arrayDimensions = [];
+    arrayDimensions = dimensions.split(/\s+/).map(Number);
+    console.log(compare(...arrayDimensions));
+    
+}
