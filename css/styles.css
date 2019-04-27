@@ -1,10 +1,19 @@
-fieldset { 
-    display: block;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding-top: 0.35em;
-    padding-bottom: 0.625em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    border: 2px groove (internal value);
- }
+.col-sm-10 > input{
+    border: none;    
+    outline: none;
+    border-bottom: 2px solid #4CC3F8;
+    border-radius: 0;
+    padding-bottom: 2px;
+    transition: padding 2s ease-in-out;
+    font-size: 34px;
+}
+.col-sm-10 > input:hover,
+.col-sm-10 > input:focus{
+    border: none;
+    outline: none !important;   
+    border-bottom: 2px solid #8EA604;
+    border-radius: 0;
+    box-shadow: none;
+    padding-bottom: 4px;
+    color: #EF476F;
+}
