@@ -141,10 +141,8 @@
             
         }     
         
-     });
+    });
 
-
-    
-    
+    init.form.addEventListener("submit",bindSubmitHandler,false);
 
 })()
