@@ -1,26 +1,66 @@
 
 (function(){
+    'use strict';
     //we will initialise the obj will DOM elements
     let init = {
         input: document.querySelector("input"),
         button: document.querySelector("button"),
-        ul: document.querySelector("ul")
+        ul: document.querySelector("ul"),
+        form: document.querySelector(".form-horizontal"),
+        feedback: document.querySelector(".feedback"),
+        results: document.querySelector("#results")
+    }
+    ,bindSubmitHandler;
+    
+   /*** event handler for submit
+     * @params: type object, 
+     * return value :none
+     */
+    function submitHandler(evt){        
+        evt.preventDefault();
+        evt.stopPropagation();
+        this.classList.add('was-validated');
+        
+        if(this.checkValidity() === false){  
+            //show error message and disable button 
+            
+            if(init.feedback.classList.contains("hide")){
+                init.feedback.classList.remove("hide");
+
+            }          
+            else if(!init.button.classList.contains("disabled")){
+                init.button.classList.add("disabled");
+
+            } 
+            init.results.classList.add("hide");
+            //init.results.innerText = "";
+        }
+        else{            
+            //compare triangles            
+            updateDom(init.results,getInput());
+            
+        }
+        init.input.value ="";
     };
     
-    init.button.addEventListener("click",getInput);
+    bindSubmitHandler = submitHandler.bind(init.form);
+
     /***
-     * click handler for button
+     * function that will get value from input     
+     * @params: type none, 
+     * return value :string
      */
-    function getInput(evt){    
-        let dimensions = document.getElementById("dimensions").value,arrayDimensions = [];
-        arrayDimensions = dimensions.split(/\s+/).map(Number);
-        console.log(compare(...arrayDimensions));    
+    
+    function getInput(){    
+        let dimensions      = init.input.value,
+            arrayDimensions = [];
+            arrayDimensions = dimensions.split(/\s+/).map(Number);
+            console.log(dimensions);
+            
+        return compare(...arrayDimensions);    
     };
 
-    init.input.addEventListener("input",(evt)=>{
-        console.log(evt.target.value);
-        //run validate methods
-    })
+    
     /***
      * function that will compare values and determine what type 
      * or if its a triangle
@@ -47,18 +87,9 @@
         else{
             return "This is not A triangle";
         }
-    }
-    /*** function that will validate input
-     * @params: type string, 
-     * return value :boolean
-     */
-    function validate(input){
-        
-        return /\d+\s+\d+\s+\d+/.test(input);
-    }
+    };
 
-
-
-
+    
+    
 
 })()
