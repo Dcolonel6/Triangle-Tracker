@@ -17,3 +17,11 @@
     padding-bottom: 4px;
     color: #EF476F;
 }
+.feedback{
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+.hide{
+    display: none;
+}
