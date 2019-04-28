@@ -75,19 +75,29 @@
                 //find out what type
                 
             if(triangle.isEquilateral()){
-                return "This is an equilateral triangle";
+                return "This is an <em>Equilateral Triangle</em>";
             }
             else if (triangle.isIsosceles()){
-                return "This is a Isosceles";
+                return "This is a <em>Isosceles Triangle</em>";
             }
             else {
-                return "This is a Scalene";
+                return "This is a <em>Scalene Triangle</em>";
             }
         }
         else{
-            return "This is not A triangle";
+            return "This is <strong>NOT</strong> A triangle";
         }
     };
+    /***
+     * function when given a string checks against our regex 
+     * @params: type string, 
+     * return value :boolean
+     */
+    function checkInput(input){
+        
+        return /\d+\s+\d+\s+\d+/.test(input);
+    }
+
 
     
     
