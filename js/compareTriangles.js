@@ -119,6 +119,29 @@
         }
         elementObj.innerText = updateText;
     };
+    init.input.addEventListener("input",(evt)=>{
+        //check if input is correct then hide error message and enable button
+        //debugger;
+        if(checkInput(evt.target.value)){            
+            // add hide, enable btn
+            if(!init.feedback.classList.contains("hide")){
+                init.feedback.classList.add("hide");
+                init.button.classList.remove("disable");
+            }        
+              
+        }
+        else{
+            //invalid
+            if(init.feedback.classList.contains("hide") || init.button.classList.contains("disable")){
+                init.feedback.classList.remove("hide");
+                init.button.classList.add("disable");
+            } 
+            init.results.classList.add("hide");
+            //init.results.innerText = "";
+            
+        }     
+        
+     });
 
 
     
