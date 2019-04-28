@@ -98,6 +98,28 @@
         return /\d+\s+\d+\s+\d+/.test(input);
     }
 
+    /**
+     * function updateDom - updates the dom given
+     * @params: object( the dom elemnt) and string
+     * return type none
+    */
+    function updateDom(elementObj,updateText){
+        init.results.classList.remove("hide");
+        if(updateText === "This is not A triangle"){
+            if(init.results.classList.contains("alert-info")){
+                init.results.classList.remove("alert-info");
+                init.results.classList.add("alert-warning")
+            }
+        }
+        else{
+            if(init.results.classList.contains("alert-warning")){
+                init.results.classList.remove("alert-warning");
+                init.results.classList.add("alert-info");
+            }
+        }
+        elementObj.innerText = updateText;
+    };
+
 
     
     
