@@ -5,7 +5,7 @@ This is an app, when given 3 dimensions will determine if they can make a triang
 Dennis Njogu
 
 ## Behaviour Driven Development
-                    |              |
+
 | My Program should handle:     | When it receives:         |It should return
 |:------------------            |:-----------------------:  |--------------------:
 |Should accept input from user  |   3 4 5                   | should output a type of a a triangle
@@ -20,6 +20,7 @@ Dennis Njogu
 2. Values are validated.
    
 ## Live Site
+Use [this](https://dcolonel6.github.io/Triangle-Tracker/) to visit the site online
 
 ## Setup and Installation
 1. Clone the repo to the local machine
