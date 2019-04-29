@@ -25,7 +25,7 @@ class Triangle{
      * returns boolean
      */
     isIsosceles(){
-        return this.dimension1 === this.dimension2 || this.dimension3 === this.dimension1 ? true : false;
+        return (this.dimension1 === this.dimension2)|| (this.dimension3 === this.dimension1) || (this.dimension3 === this.dimension2) ? true : false;
     }
      /***
      * isScalene
