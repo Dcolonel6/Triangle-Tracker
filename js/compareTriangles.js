@@ -75,17 +75,17 @@
                 //find out what type
                 
             if(triangle.isEquilateral()){
-                return "This is an <em>Equilateral Triangle</em>";
+                return "This is an Equilateral Triangle";
             }
             else if (triangle.isIsosceles()){
-                return "This is a <em>Isosceles Triangle</em>";
+                return "This is a Isosceles Triangle";
             }
             else {
-                return "This is a <em>Scalene Triangle</em>";
+                return "This is a Scalene Triangle"
             }
         }
         else{
-            return "This is <strong>NOT</strong> A triangle";
+            return "This is NOT A triangle";
         }
     };
     /***
