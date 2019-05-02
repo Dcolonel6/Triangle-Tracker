@@ -35,5 +35,5 @@ Use [this](https://dcolonel6.github.io/Triangle-Tracker/) to visit the site onli
 For any clarification or addition information, contact the author at d.n_mwangi@outlook.com
 
 ## License
-This software is Licensed under MIT license Copyright (2018) [Dennis Njogu](https://opensource.org)
+This software is Licensed under MIT license Copyright (2018) [Dennis Njogu](https://github.com/Dcolonel6/Triangle-Tracker/blob/master/LICENSE)
 
